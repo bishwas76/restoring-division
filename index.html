@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+	<title>Restoring Division Algorithm</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="decimal_to_binary.js">
+	</script>
+	<script type="text/javascript" src="binary_Add.js">
+	</script>
+	<script type="text/javascript" src="negative_logic.js">
+	</script>
+	<script type="text/javascript" src="shift_left.js">
+	</script>
+	<script type="text/javascript" src="binary_to_decimal.js">
+	</script>
+</head>
+
+<!-- ANCHOR theme color #8000FF -->
+
+<body>
+
+
+	<div class="container">
+
+		<div class="svg-container-wrapper">
+			<div class="svg-container">
+				<svg class="svg-flowchart" preserveAspectRatio="xMinYMin meet" viewBox="0 0 793 1130" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g id="descision_box_count_0">
+						<path id="descision_box_count_0_2" d="M371.414 902.5L435.5 838.414L499.586 902.5L435.5 966.586L371.414 902.5Z" stroke="#8000FF"
+						 stroke-width="2" />
+						<text id="IS count = 0 ?" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20"
+						 letter-spacing="0em">
+							<tspan x="427.838" y="871.336">IS&#10;</tspan>
+							<tspan x="395.191" y="904.336">count = 0&#10;</tspan>
+							<tspan x="431.773" y="937.336">?</tspan>
+						</text>
+					</g>
+					<g id="stop_box">
+						<rect id="stop_box_2" x="365" y="1033" width="140" height="47" rx="23.5" stroke="#8000FF" stroke-width="2" />
+						<text id="stop_box_text" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+							<tspan
+							 x="410" y="1063.34">STOP</tspan>
+						</text>
+					</g>
+					<g id="setter_box_q0_1">
+						<rect id="setter_box_q0_1_2" x="151" y="605" width="168" height="58" rx="4" stroke="#8000FF" stroke-width="2" />
+						<g id="a_less_y">
+							<g id="arrow_left_q0_1">
+								<path id="arrow_left" d="M214.293 631.293C213.902 631.683 213.902 632.317 214.293 632.707L220.657 639.071C221.047 639.462 221.681 639.462 222.071 639.071C222.462 638.681 222.462 638.047 222.071 637.657L216.414 632L222.071 626.343C222.462 625.953 222.462 625.319 222.071 624.929C221.681 624.538 221.047 624.538 220.657 624.929L214.293 631.293ZM261 631H215V633H261V631Z"
+								 fill="#8000FF" />
+							</g>
+							<text id="Q0" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+								<tspan
+								 x="187" y="639.336">Q0</tspan>
+							</text>
+							<text id="1" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+								<tspan
+								 x="270" y="639.336">1</tspan>
+							</text>
+						</g>
+					</g>
+					<g id="line_left_down">
+						<path id="arrow_down" d="M236.293 590.707C236.683 591.098 237.317 591.098 237.707 590.707L244.071 584.343C244.462 583.953 244.462 583.319 244.071 582.929C243.681 582.538 243.047 582.538 242.657 582.929L237 588.586L231.343 582.929C230.953 582.538 230.319 582.538 229.929 582.929C229.538 583.319 229.538 583.953 229.929 584.343L236.293 590.707ZM236 553V590H238V553H236Z"
+						 fill="#8000FF" />
+						<line id="Line" x1="237" y1="552" x2="367" y2="552" stroke="#8000FF" stroke-width="2" />
+					</g>
+					<g id="setter_box_count_m">
+						<rect id="setter_box_count_m_2" x="352" y="726" width="168" height="58" rx="4" stroke="#8000FF" stroke-width="2" />
+						<g id="count_min">
+							<text id="count_m_1" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+								<tspan
+								 x="455" y="758.969">count - 1</tspan>
+							</text>
+							<g id="arrow_left_a+m">
+								<path id="arrow_left_2" d="M413.293 754.293C412.902 754.683 412.902 755.317 413.293 755.707L419.657 762.071C420.047 762.462 420.681 762.462 421.071 762.071C421.462 761.681 421.462 761.047 421.071 760.657L415.414 755L421.071 749.343C421.462 748.953 421.462 748.319 421.071 747.929C420.681 747.538 420.047 747.538 419.657 747.929L413.293 754.293ZM452 754H414V756H452V754Z"
+								 fill="#8000FF" />
+							</g>
+							<text id="count" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+								<tspan
+								 x="357" y="761.336">count</tspan>
+							</text>
+						</g>
+					</g>
+					<g id="line_count_no_zero">
+						<path id="arrow_right" d="M418.707 240.707C419.098 240.317 419.098 239.683 418.707 239.293L412.343 232.929C411.953 232.538 411.319 232.538 410.929 232.929C410.538 233.319 410.538 233.953 410.929 234.343L416.586 240L410.929 245.657C410.538 246.047 410.538 246.681 410.929 247.071C411.319 247.462 411.953 247.462 412.343 247.071L418.707 240.707ZM76 241L418 241L418 239L76 239L76 241Z"
+						 fill="#8000FF" />
+						<line id="Line_2" x1="76" y1="902" x2="370" y2="902" stroke="#8000FF" stroke-width="2" />
+						<line id="Line_3" x1="75" y1="903" x2="75" y2="241" stroke="#8000FF" stroke-width="2" />
+					</g>
+					<g id="arrow_down_2">
+						<path id="arrow_down_6" d="M435.293 1019.71C435.683 1020.1 436.317 1020.1 436.707 1019.71L443.071 1013.34C443.462 1012.95 443.462 1012.32 443.071 1011.93C442.681 1011.54 442.047 1011.54 441.657 1011.93L436 1017.59L430.343 1011.93C429.953 1011.54 429.319 1011.54 428.929 1011.93C428.538 1012.32 428.538 1012.95 428.929 1013.34L435.293 1019.71ZM435 973L435 1019L437 1019L437 973L435 973Z"
+						 fill="#8000FF" />
+					</g>
+					<g id="arrow_down_3">
+						<path id="arrow_down_5" d="M435.293 831.707C435.683 832.098 436.317 832.098 436.707 831.707L443.071 825.343C443.462 824.953 443.462 824.319 443.071 823.929C442.681 823.538 442.047 823.538 441.657 823.929L436 829.586L430.343 823.929C429.953 823.538 429.319 823.538 428.929 823.929C428.538 824.319 428.538 824.953 428.929 825.343L435.293 831.707ZM435 794V831H437V794H435Z"
+						 fill="#8000FF" />
+					</g>
+					<g id="line_left_up">
+						<line id="Line_4" x1="238" y1="757.011" x2="238" y2="668.989" stroke="#8000FF" stroke-width="2" />
+						<path id="arrow_down_right" d="M345.707 756.707C346.098 756.317 346.098 755.683 345.707 755.293L339.343 748.929C338.953 748.538 338.319 748.538 337.929 748.929C337.538 749.319 337.538 749.953 337.929 750.343L343.586 756L337.929 761.657C337.538 762.047 337.538 762.681 337.929 763.071C338.319 763.462 338.953 763.462 339.343 763.071L345.707 756.707ZM237 757L345 757L345 755L237 755L237 757Z"
+						 fill="#8000FF" />
+					</g>
+					<g id="line_down_left">
+						<path id="arrow_left_3" d="M522.293 756.293C521.902 756.683 521.902 757.317 522.293 757.707L528.657 764.071C529.047 764.462 529.681 764.462 530.071 764.071C530.462 763.681 530.462 763.047 530.071 762.657L524.414 757L530.071 751.343C530.462 750.953 530.462 750.319 530.071 749.929C529.681 749.538 529.047 749.538 528.657 749.929L522.293 756.293ZM617 756H523V758H617V756Z"
+						 fill="#8000FF" />
+						<line id="Line_5" x1="617" y1="757.028" x2="617" y2="695.984" stroke="#8000FF" stroke-width="2" />
+					</g>
+					<g id="setter_box_a_p_m">
+						<rect id="setter_box_a_p_m_2" x="545" y="605" width="168" height="90" rx="4" stroke="#8000FF" stroke-width="2" />
+						<g id="a_less_y_2">
+							<text id="A_p_M" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+								<tspan
+								 x="644" y="636.969">A + M</tspan>
+							</text>
+							<g id="arrow_left_4">
+								<path id="arrow_left_a_p_m" d="M590.293 632.293C589.902 632.683 589.902 633.317 590.293 633.707L596.657 640.071C597.047 640.462 597.681 640.462 598.071 640.071C598.462 639.681 598.462 639.047 598.071 638.657L592.414 633L598.071 627.343C598.462 626.953 598.462 626.319 598.071 625.929C597.681 625.538 597.047 625.538 596.657 625.929L590.293 632.293ZM637 632H591V634H637V632Z"
+								 fill="#8000FF" />
+							</g>
+							<g id="arrow_left_5">
+								<path id="arrow_left_q0_0" d="M597.293 663.293C596.902 663.683 596.902 664.317 597.293 664.707L603.657 671.071C604.047 671.462 604.681 671.462 605.071 671.071C605.462 670.681 605.462 670.047 605.071 669.657L599.414 664L605.071 658.343C605.462 657.953 605.462 657.319 605.071 656.929C604.681 656.538 604.047 656.538 603.657 656.929L597.293 663.293ZM644 663H598V665H644V663Z"
+								 fill="#8000FF" />
+							</g>
+							<text id="accum" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+								<tspan
+								 x="570" y="639.336">A</tspan>
+							</text>
+							<text id="Q0_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+								<tspan
+								 x="570" y="671.336">Q0</tspan>
+							</text>
+							<text id="0" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+								<tspan
+								 x="653" y="671.336">0</tspan>
+							</text>
+						</g>
+					</g>
+					<g id="line_RD_1">
+						<path id="arrow_down_4" d="M615.293 589.707C615.683 590.098 616.317 590.098 616.707 589.707L623.071 583.343C623.462 582.953 623.462 582.319 623.071 581.929C622.681 581.538 622.047 581.538 621.657 581.929L616 587.586L610.343 581.929C609.953 581.538 609.319 581.538 608.929 581.929C608.538 582.319 608.538 582.953 608.929 583.343L615.293 589.707ZM615 552V589H617V552H615Z"
+						 fill="#8000FF" />
+						<line id="Line_db_less" x1="501" y1="552" x2="617" y2="552" stroke="#8000FF" stroke-width="2" />
+					</g>
+					<g id="descision_box_is_less">
+						<path id="descision_box_is_less_2" d="M371.414 552.5L435.5 488.414L499.586 552.5L435.5 616.586L371.414 552.5Z" stroke="#8000FF"
+						 stroke-width="2" />
+						<text id="a_less" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0.185em">
+							<tspan
+							 x="427.59" y="528.969">IS&#10;</tspan>
+							<tspan x="419.259" y="557.969">A&#60;0&#10;</tspan>
+							<tspan x="432.219" y="586.969">?</tspan>
+						</text>
+					</g>
+					<g id="arrow_down_7">
+						<path id="arrow_down_4_2" d="M435.293 481.707C435.683 482.098 436.317 482.098 436.707 481.707L443.071 475.343C443.462 474.953 443.462 474.319 443.071 473.929C442.681 473.538 442.047 473.538 441.657 473.929L436 479.586L430.343 473.929C429.953 473.538 429.319 473.538 428.929 473.929C428.538 474.319 428.538 474.953 428.929 475.343L435.293 481.707ZM435 444V481H437V444H435Z"
+						 fill="#8000FF" />
+					</g>
+					<g id="arrow_down_8">
+						<path id="arrow_down_3_2" d="M435.293 367.707C435.683 368.098 436.317 368.098 436.707 367.707L443.071 361.343C443.462 360.953 443.462 360.319 443.071 359.929C442.681 359.538 442.047 359.538 441.657 359.929L436 365.586L430.343 359.929C429.953 359.538 429.319 359.538 428.929 359.929C428.538 360.319 428.538 360.953 428.929 361.343L435.293 367.707ZM435 330V367H437V330H435Z"
+						 fill="#8000FF" />
+					</g>
+					<g id="setter_box_SL">
+						<rect id="setter_box_SL_2" x="352" y="269" width="168" height="58" rx="4" stroke="#8000FF" stroke-width="2" />
+						<text id="A,Q" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+							<tspan
+							 x="465" y="302.969">A,Q</tspan>
+						</text>
+						<text id="SHIFT LEFT" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+							<tspan
+							 x="370" y="302.969">SHIFT LEFT </tspan>
+						</text>
+					</g>
+					<g id="arrow_down_9">
+						<path id="arrow_down_2_2" d="M435.293 260.707C435.683 261.098 436.317 261.098 436.707 260.707L443.071 254.343C443.462 253.953 443.462 253.319 443.071 252.929C442.681 252.538 442.047 252.538 441.657 252.929L436 258.586L430.343 252.929C429.953 252.538 429.319 252.538 428.929 252.929C428.538 253.319 428.538 253.953 428.929 254.343L435.293 260.707ZM435 223V260H437V223H435Z"
+						 fill="#8000FF" />
+					</g>
+					<g id="setter_box_init">
+						<rect id="setter_box_init_2" x="330" y="141" width="215" height="73" rx="4" stroke="#8000FF" stroke-width="2" />
+						<text id="start_box_text" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="17"
+						 letter-spacing="0em">
+							<tspan x="346" y="164.811">A = 0</tspan>
+						</text>
+						<text id="start_box_text_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="17"
+						 letter-spacing="0em">
+							<tspan x="346" y="192.811">Q =</tspan>
+						</text>
+						<text id="q_info" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="17" letter-spacing="0em">
+							<tspan
+							 x="375" y="190.811">q</tspan>
+						</text>
+						<text id="start_box_text_3" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="17"
+						 letter-spacing="0em">
+							<tspan x="427" y="164.811">M =</tspan>
+						</text>
+						<text id="m_info" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="17" letter-spacing="0em">
+							<tspan
+							 x="464" y="164.811">m</tspan>
+						</text>
+						<text id="start_box_text_4" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="17"
+						 letter-spacing="0em">
+							<tspan x="427" y="192.811">count = </tspan>
+						</text>
+						<text id="count_info" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="17" letter-spacing="0em">
+							<tspan
+							 x="491" y="192.811">n</tspan>
+						</text>
+					</g>
+					<g id="arrow_down_10">
+						<path id="arrow_down_1" d="M435.293 130.707C435.683 131.098 436.317 131.098 436.707 130.707L443.071 124.343C443.462 123.953 443.462 123.319 443.071 122.929C442.681 122.538 442.047 122.538 441.657 122.929L436 128.586L430.343 122.929C429.953 122.538 429.319 122.538 428.929 122.929C428.538 123.319 428.538 123.953 428.929 124.343L435.293 130.707ZM435 93V130H437V93H435Z"
+						 fill="#8000FF" />
+					</g>
+					<g id="start_box">
+						<rect id="start_box_2" x="366" y="41" width="140" height="47" rx="23.5" stroke="#8000FF" stroke-width="2" />
+						<text id="start_box_text_5" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="12"
+						 letter-spacing="0em">
+							<tspan x="418" y="68.1016">START</tspan>
+						</text>
+					</g>
+					<text id="no" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+						<tspan
+						 x="316" y="885.336">no</tspan>
+					</text>
+					<text id="yes" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+						<tspan
+						 x="466" y="993.336">yes</tspan>
+					</text>
+					<text id="no_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+						<tspan
+						 x="344" y="532.336">no</tspan>
+					</text>
+					<g id="setter_box_a-m">
+						<rect id="setter_box_a-m_2" x="352" y="379" width="168" height="59" rx="4" stroke="#8000FF" stroke-width="2" />
+						<g id="A - M">
+							<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="16" letter-spacing="0em">
+								<tspan
+								 x="462" y="415.203">A </tspan>
+								<tspan x="483.039" y="415.203"> M</tspan>
+							</text>
+							<text fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="24" letter-spacing="0em">
+								<tspan
+								 x="476.406" y="415.203">-</tspan>
+							</text>
+						</g>
+						<g id="arrow_left_a-m">
+							<path id="arrow_left_6" d="M408.293 409.293C407.902 409.683 407.902 410.317 408.293 410.707L414.657 417.071C415.047 417.462 415.681 417.462 416.071 417.071C416.462 416.681 416.462 416.047 416.071 415.657L410.414 410L416.071 404.343C416.462 403.953 416.462 403.319 416.071 402.929C415.681 402.538 415.047 402.538 414.657 402.929L408.293 409.293ZM455 409H409V411H455V409Z"
+							 fill="#8000FF" />
+						</g>
+						<text id="accum_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+							<tspan
+							 x="388" y="417.336">A</tspan>
+						</text>
+					</g>
+					<text id="yes_2" fill="black" xml:space="preserve" style="white-space: pre" font-family="Roboto" font-size="20" letter-spacing="0em">
+						<tspan
+						 x="523" y="532.336">yes</tspan>
+					</text>
+				</svg>
+
+
+			</div>
+		</div>
+		<div class="table-container">
+			<table align="center" border="1" id="steps-table">
+			</table>
+		</div>
+
+<div style="display:inline-block">
+		<div class="answer">
+			M = <span id="M"></span>
+       -M =<span id="mM"></span><br>
+       Quotient =  <span id="quotient"></span><br>
+       Remainder =  <span id="remainder"></span>
+        <div>
+          <div class="controls">
+        <button id="do-next" disabled>NEXT ⏭</button>
+        <button id="restart" onclick="main()">RESTART ↩</button>
+      </div>
+      <div>
+	</div>
+	
+    <script type = "text/javascript" src = "script.js"></script>
+</body>
+
+</html>

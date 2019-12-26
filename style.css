@@ -1,0 +1,87 @@
+.controls{
+  overflow: hidden;
+  padding: 5pt;
+  font-size: 20pt;
+  display: inline-block;
+}
+.controls button{
+  float: left;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border:2pt #8000FF;
+	border-style: solid;
+	border-radius: 5pt;
+}
+.controls button:hover{
+  background-color: #8000FF;
+  color: white;
+}
+.container{
+	display: flex;
+}
+.svg-container-wrapper{
+	position: sticky;
+  margin: 0 10pt 0 0;
+	width: 32%;
+}
+.svg-container{
+	border:2pt #8000FF;
+	border-style: solid;
+	border-radius: 5pt;
+  display: inline-flex;
+	position: relative;
+	width: 100%;
+	padding-bottom: 142%;/* must-include this:(height/width of svg)*width of this container */
+	vertical-align: middle;  
+}
+.table-container{
+	border:2pt #8000FF;
+	border-style: solid;
+	border-radius: 5pt;
+  display: inline-flex;
+  align-content: center;
+  padding: 5pt;
+	position: relative;
+}
+.svg-flowchart{
+    display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+/* 1130 793 */
+
+#steps-table {
+  padding: 1pt;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#custosteps-tablemers tbody tr td, #steps-table tbody tr th {
+  border: 1pt solid #8000FF;
+  padding: 8pt;
+}
+
+#steps-table tbody:nth-child(even){background-color: #ac70fa62;}
+
+#steps-table tbody tr:hover {background-color: #ddd;}
+
+#steps-table tbody tr th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #8000FF;
+  color: white;
+}
+.step-highlighted{
+  fill: #8000FF;
+}
+.step-highlighted text{
+  fill: white;
+}
+.step-highlighted *{
+  stroke:white;
+}
